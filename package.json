@@ -2,14 +2,21 @@
   "name": "fable.exceljs",
   "version": "1.0.0",
   "description": "Fable bindings for exceljs",
-  "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "pretest": "dotnet fable tests/Fable.exceljs.Tests -o tests/Fable.exceljs.JsNativeTests/fable",
+    "test": "mocha tests/Fable.exceljs.JsNativeTests/fable",
+    "posttest": "mocha tests/Fable.exceljs.JsNativeTests",
+    "test:live": "mocha --watch --parallel tests/Fable.exceljs.JsNativeTests/fable",
+    "testnative:live": "mocha --watch --parallel tests/exceljs.JsNativeTests"
   },
   "keywords": [
     "fable",
     "fable-bindings"
   ],
   "author": "Kevin Frey",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^10.2.0"
+  }
 }
