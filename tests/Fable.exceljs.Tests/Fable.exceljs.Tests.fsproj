@@ -8,6 +8,11 @@
 
   <ItemGroup>
     <Compile Include="Tables.Tests.fs" />
+    <Compile Include="Cell.Tests.fs" />
+    <Compile Include="Row.Tests.fs" />
+    <Compile Include="Column.Tests.fs" />
+    <Compile Include="Worksheet.Tests.fs" />
+    <Compile Include="Workbook.Tests.fs" />
     <Compile Include="Main.fs" />
   </ItemGroup>
 
