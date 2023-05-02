@@ -15,9 +15,13 @@ Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Fable.exceljs.Tests", "test
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D26A32A6-C35D-48FF-8ADB-6D902C64A483}"
 	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
 		build.cmd = build.cmd
 		package.json = package.json
+		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "JsNativeTests", "JsNativeTests", "{C654AFD3-6F48-4744-92FB-0A4DBD02F046}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,5 +48,9 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{92E13909-B77E-4B76-A30B-A8A4E388D6E3} = {71A9B89F-A805-43E6-AD2D-6F6A2BAF8692}
 		{FE0456E4-74FB-4188-8BE9-8768E14C6E50} = {9DA6C4F3-8EC5-4080-9B97-D7DC8A6E8585}
+		{C654AFD3-6F48-4744-92FB-0A4DBD02F046} = {9DA6C4F3-8EC5-4080-9B97-D7DC8A6E8585}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B6B39965-2059-43CA-96FE-E44903BAAC0D}
 	EndGlobalSection
 EndGlobal

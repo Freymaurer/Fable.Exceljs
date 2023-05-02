@@ -13,8 +13,13 @@
 
   <ItemGroup>
     <PackageReference Include="Expecto" Version="9.*" />
+    <PackageReference Include="Fable.Mocha" Version="2.16.0" />
     <PackageReference Include="YoloDev.Expecto.TestSdk" Version="0.*" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.*" />
-    <PackageReference Update="FSharp.Core" Version="6.*" />
+    <PackageReference Update="FSharp.Core" Version="[6.0.7]" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Fable.exceljs\Fable.exceljs.fsproj" />
   </ItemGroup>
 </Project>
