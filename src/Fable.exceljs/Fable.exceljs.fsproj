@@ -8,9 +8,10 @@
   <ItemGroup>
     <Compile Include="Library.fs" />
   </ItemGroup>
-
+	
 	<ItemGroup>
-		<PackageReference Update="FSharp.Core" Version="[6.0.7]" />
+      <PackageReference Update="FSharp.Core" Version="[6.0.7]" />
+	  <PackageReference Include="Fable.Core" Version="4.0.0" />
 	</ItemGroup>
 
 </Project>
