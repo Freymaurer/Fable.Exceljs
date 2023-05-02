@@ -6,7 +6,16 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="Library.fs" />
+    <Compile Include="Unions.fs" />
+    <Compile Include="Cell.fs" />
+    <Compile Include="Row.fs" />
+    <Compile Include="Column.fs" />
+    <Compile Include="Table.fs" />
+    <Compile Include="Worksheet.fs" />
+    <Compile Include="Xlsx.fs" />
+    <Compile Include="Workbook.fs" />
+    <Compile Include="ExcelJs.fs" />
+    <Compile Include="Extensions.fs" />
   </ItemGroup>
 	
 	<ItemGroup>
