@@ -13,6 +13,7 @@
     <Compile Include="Column.Tests.fs" />
     <Compile Include="Worksheet.Tests.fs" />
     <Compile Include="Workbook.Tests.fs" />
+    <Compile Include="Xlsx.Tests.fs" />
     <Compile Include="Main.fs" />
   </ItemGroup>
 

@@ -9,6 +9,7 @@ let Main = testList "Main" [
     Column.Tests.main
     Worksheet.Tests.main
     Workbook.Tests.main
+    Xlsx.Tests.main
 ]
 
 let [<EntryPoint>] main argv = Mocha.runTests Main
