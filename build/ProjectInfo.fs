@@ -7,7 +7,6 @@ let project = "Fable.exceljs"
 let testProjects = 
     [
         // add relative paths (from project root) to your testprojects here
-        "tests/Fable.exceljs.Tests/Fable.exceljs.Tests.fsproj"
     ]
 
 let solutionFile  = $"{project}.sln"

@@ -28,5 +28,5 @@ type Cell =
     abstract member result: obj with get
     abstract member col: int with get
     abstract member row: int with get
-    abstract member workbook: Workbook with get
-    abstract member Worksheet: Worksheet with get
+    //abstract member workbook: Workbook.Workbook with get
+    //abstract member Worksheet: Worksheet with get
