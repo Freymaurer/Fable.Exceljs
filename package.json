@@ -1,0 +1,15 @@
+{
+  "name": "fable.exceljs",
+  "version": "1.0.0",
+  "description": "Fable bindings for exceljs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "fable",
+    "fable-bindings"
+  ],
+  "author": "Kevin Frey",
+  "license": "MIT"
+}
