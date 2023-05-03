@@ -9,7 +9,7 @@ let ws_name = "MySheet1"
 
 let main = testList "Column" [
     testCase "columns update" <| fun _ ->
-        let wb = ExcelJs.exceljs.Workbook()
+        let wb = ExcelJs.Excel.Workbook()
         let ws = wb.addWorksheet(ws_name)
         ws.columns <- [|
             for i in 1 .. 10 do
@@ -18,7 +18,7 @@ let main = testList "Column" [
         Expect.hasLength ws.columns 10 "hasLength"
         Expect.equal ws.columnCount 10 "columnCount"
     testCase "column props" <| fun _ ->
-        let wb = ExcelJs.exceljs.Workbook()
+        let wb = ExcelJs.Excel.Workbook()
         let ws = wb.addWorksheet(ws_name)
         ws.columns <- [|
             for i in 1 .. 10 do
@@ -31,7 +31,7 @@ let main = testList "Column" [
         Expect.equal col.letter "C" "letter"
         Expect.equal col.header "Header3" "header"
     testCase "getColumn" <| fun _ ->
-        let wb = ExcelJs.exceljs.Workbook()
+        let wb = ExcelJs.Excel.Workbook()
         let ws = wb.addWorksheet(ws_name)
         ws.columns <- [|
             for i in 1 .. 10 do
@@ -44,7 +44,7 @@ let main = testList "Column" [
         Expect.equal col2_1 col2_2 "equal 1"
         Expect.equal col2_1 col2_3 "equal 2"
     testCase "eachCell" <| fun _ ->
-        let wb = ExcelJs.exceljs.Workbook()
+        let wb = ExcelJs.Excel.Workbook()
         let ws = wb.addWorksheet(ws_name)
         let col = ws.getColumn(1)
         col.values <- [|Some "Row1"; Some "Row2"; Some "Row3"|]
@@ -58,7 +58,7 @@ let main = testList "Column" [
         Expect.equal nonEmptyValues.[1] 2 "2"
         Expect.equal nonEmptyValues.[2] 3 "3"
     testCase "eachCell_IncludeEmpty" <| fun _ ->
-        let wb = ExcelJs.exceljs.Workbook()
+        let wb = ExcelJs.Excel.Workbook()
         let ws = wb.addWorksheet(ws_name)
         let col = ws.getColumn(1)
         col.values <- [|Some "Row1"; None; Some "Row3"|]
@@ -72,7 +72,7 @@ let main = testList "Column" [
         Expect.equal skipZeroBasedIndex.[1] (Some 2) "2"
         Expect.equal skipZeroBasedIndex.[2] (Some 3) "3"
     testCase "eachCell_IncludeEmpty_Not" <| fun _ ->
-        let wb = ExcelJs.exceljs.Workbook()
+        let wb = ExcelJs.Excel.Workbook()
         let ws = wb.addWorksheet(ws_name)
         let col = ws.getColumn(1)
         col.values <- [|Some "Row1"; None; Some "Row3"|]

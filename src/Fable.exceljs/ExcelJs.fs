@@ -7,4 +7,4 @@ type ExcelJS =
     [<Emit("new $0.Workbook()")>]
     abstract member Workbook: unit -> Workbook
     
-let exceljs: ExcelJS = importDefault "exceljs"
+let Excel: ExcelJS = importDefault "exceljs"

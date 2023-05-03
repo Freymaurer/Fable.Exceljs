@@ -20,7 +20,7 @@ let main = testList "Xlsx" [
         Expect.isTrue true ""
     }
     testAsync "Read Xlsx" {
-        let workbook = ExcelJs.exceljs.Workbook()
+        let workbook = ExcelJs.Excel.Workbook()
         Expect.passWithMsg "Create workbook"
         do! workbook.xlsx.readFile(MinimalPath)
         Expect.passWithMsg "Read File"

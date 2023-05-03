@@ -16,7 +16,7 @@ let row5_values = v_arr 'd'
 
 let main = testList "Row" [
     testCase "addRow obj option []" <| fun _ ->
-        let wb = ExcelJs.exceljs.Workbook()
+        let wb = ExcelJs.Excel.Workbook()
         let ws = wb.addWorksheet(ws_name)
         ws.columns <- [|
             for i in 1 .. 10 do
@@ -26,7 +26,7 @@ let main = testList "Row" [
         let row = ws.addRow(v_arr)
         Expect.equal row.values.[1..] v_arr ""
     testCase "addRow obj" <| fun _ ->
-        let wb = ExcelJs.exceljs.Workbook()
+        let wb = ExcelJs.Excel.Workbook()
         let ws = wb.addWorksheet(ws_name)
         ws.columns <- [|
             for i in 1 .. 10 do
@@ -50,7 +50,7 @@ let main = testList "Row" [
         Expect.equal r.values.[6] (None) "6"
         Expect.equal r.values.[7] (Some "Test me too") "7"
     testCase "addRows obj" <| fun _ ->
-        let wb = ExcelJs.exceljs.Workbook()
+        let wb = ExcelJs.Excel.Workbook()
         let ws = wb.addWorksheet(ws_name)
         ws.columns <- [|
             for i in 1 .. 10 do
@@ -80,7 +80,7 @@ let main = testList "Row" [
         Expect.equal r.values.[6] (None) "6"
         Expect.equal r.values.[7] (Some "Test me too") "7"
     testCase "eachRow" <| fun _ ->
-        let wb = ExcelJs.exceljs.Workbook()
+        let wb = ExcelJs.Excel.Workbook()
         let ws = wb.addWorksheet(ws_name)
         ws.columns <- [|
             for i in 1 .. 10 do
@@ -98,7 +98,7 @@ let main = testList "Row" [
         Expect.equal (ws.getRow(4).values.[1..]) testArr "row3"
         Expect.equal (ws.getRow(5).values.[1..]) testArr "row4"
     testCase "insertRow" <| fun _ ->
-        let wb = ExcelJs.exceljs.Workbook()
+        let wb = ExcelJs.Excel.Workbook()
         let ws = wb.addWorksheet(ws_name)
         ws.columns <- [|
             for i in 1 .. 10 do
@@ -113,7 +113,7 @@ let main = testList "Row" [
         Expect.equal (ws.getRow(3).values.[1..]) row2_values "isShifted"
         Expect.equal (ws.getRow(4).values.[1..]) row3_values "isShifted2"
     testCase "insertRows" <| fun _ ->
-        let wb = ExcelJs.exceljs.Workbook()
+        let wb = ExcelJs.Excel.Workbook()
         let ws = wb.addWorksheet(ws_name)
         ws.columns <- [|
             for i in 1 .. 10 do
@@ -128,7 +128,7 @@ let main = testList "Row" [
         Expect.equal (ws.getRow(3).values.[1..]) testArr "isInserted2"
         Expect.equal (ws.getRow(4).values.[1..]) row2_values "isShifted"
     testCase "spliceRows" <| fun _ ->
-        let wb = ExcelJs.exceljs.Workbook()
+        let wb = ExcelJs.Excel.Workbook()
         let ws = wb.addWorksheet(ws_name)
         ws.columns <- [|
             for i in 1 .. 10 do
@@ -144,7 +144,7 @@ let main = testList "Row" [
         Expect.equal (ws.getRow(2).values.[1..]) row2_values "above splice"
         Expect.equal (ws.getRow(3).values.[1..]) row4_values "below splice"
     testCase "spliceRows with insert" <| fun _ ->
-        let wb = ExcelJs.exceljs.Workbook()
+        let wb = ExcelJs.Excel.Workbook()
         let ws = wb.addWorksheet(ws_name)
         ws.columns <- [|
             for i in 1 .. 10 do
@@ -162,7 +162,7 @@ let main = testList "Row" [
         Expect.equal (ws.getRow(4).values.[1..]) testArr "below splice insert 2"
         Expect.equal (ws.getRow(5).values.[1..]) row4_values "below splice"
     testCase "duplicateRow single" <| fun _ ->
-        let wb = ExcelJs.exceljs.Workbook()
+        let wb = ExcelJs.Excel.Workbook()
         let ws = wb.addWorksheet(ws_name)
         ws.columns <- [|
             for i in 1 .. 10 do
@@ -188,7 +188,7 @@ let main = testList "Row" [
         Expect.equal (ws.getRow(6).values.[1..]) row5_values "row6"
         Expect.hasLength ws.rows 6 "number of Rows after"
     testCase "duplicateRow single replace" <| fun _ ->
-        let wb = ExcelJs.exceljs.Workbook()
+        let wb = ExcelJs.Excel.Workbook()
         let ws = wb.addWorksheet(ws_name)
         ws.columns <- [|
             for i in 1 .. 10 do
@@ -207,7 +207,7 @@ let main = testList "Row" [
         Expect.equal (ws.getRow(5).values.[1..]) row5_values "row5"
         Expect.hasLength ws.rows 5 "number of Rows"
     testCase "duplicateRow multiple" <| fun _ ->
-        let wb = ExcelJs.exceljs.Workbook()
+        let wb = ExcelJs.Excel.Workbook()
         let ws = wb.addWorksheet(ws_name)
         ws.columns <- [|
             for i in 1 .. 10 do
@@ -227,7 +227,7 @@ let main = testList "Row" [
         Expect.equal (ws.getRow(6).values.[1..]) row3_values "row6"
         Expect.hasLength ws.rows 8 "number of Rows"
     testCase "duplicateRow multiple replace" <| fun _ ->
-        let wb = ExcelJs.exceljs.Workbook()
+        let wb = ExcelJs.Excel.Workbook()
         let ws = wb.addWorksheet(ws_name)
         ws.columns <- [|
             for i in 1 .. 10 do
@@ -252,7 +252,7 @@ let main = testList "Row" [
         Expect.equal (ws.getRow(5).values.[1..]) row2_values "row5"
         Expect.hasLength ws.rows 5 "number of Rows"
     testCase "duplicateRow multiple replace more than previous existing" <| fun _ ->
-        let wb = ExcelJs.exceljs.Workbook()
+        let wb = ExcelJs.Excel.Workbook()
         let ws = wb.addWorksheet(ws_name)
         ws.columns <- [|
             for i in 1 .. 10 do

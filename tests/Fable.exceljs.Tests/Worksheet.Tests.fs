@@ -8,7 +8,7 @@ let ws_name = "MySheet1"
 
 let main = testList "Worksheet" [
     testCase "Worksheet properties" <| fun _ ->
-        let wb = ExcelJs.exceljs.Workbook()
+        let wb = ExcelJs.Excel.Workbook()
         let ws = wb.addWorksheet(ws_name)
         let name = ws_name + "TEST"
         let state = WorksheetState.Hidden
@@ -29,7 +29,7 @@ let main = testList "Worksheet" [
         Expect.isNone ws.lastRow "lastRow"
         Expect.isNone ws.lastColumn "lastColumn"
     testCase "Last row isSome" <| fun _ ->
-        let wb = ExcelJs.exceljs.Workbook()
+        let wb = ExcelJs.Excel.Workbook()
         let ws = wb.addWorksheet(ws_name)
         ws.columns <- [|
             Column.create("HeaderUp", "id")
@@ -39,7 +39,7 @@ let main = testList "Worksheet" [
         Expect.equal ws.lastRowNumber 1 "lastRow isSome"
         Expect.equal ws.lastRow.Value.cellCount 2 "lastRow.Value.values"
     testCase "Last column isSome" <| fun _ ->
-        let wb = ExcelJs.exceljs.Workbook()
+        let wb = ExcelJs.Excel.Workbook()
         let ws = wb.addWorksheet(ws_name)
         ws.columns <- [|
             Column.create("HeaderUp", "id")
@@ -47,7 +47,7 @@ let main = testList "Worksheet" [
         |]
         Expect.isSome ws.lastColumn "lastRow isSome"
     testCase "Worksheet columns" <| fun _ ->
-        let wb = ExcelJs.exceljs.Workbook()
+        let wb = ExcelJs.Excel.Workbook()
         let ws = wb.addWorksheet(ws_name)
         ws.columns <- [|
             Column.create("HeaderUp", "id")
@@ -55,7 +55,7 @@ let main = testList "Worksheet" [
         |]
         Expect.hasLength ws.columns 2 "column length"
     testCase "Worksheet row/column count" <| fun _ ->
-        let wb = ExcelJs.exceljs.Workbook()
+        let wb = ExcelJs.Excel.Workbook()
         let ws = wb.addWorksheet(ws_name)
         ws.columns <- [|
             Column.create("HeaderUp", "id")
@@ -66,7 +66,7 @@ let main = testList "Worksheet" [
         Expect.equal ws.actualRowCount 1 "actualRowCount"
         Expect.equal ws.rowCount 1 "actualRowCount"
     testCase "Worksheet row/column count 2" <| fun _ ->
-        let wb = ExcelJs.exceljs.Workbook()
+        let wb = ExcelJs.Excel.Workbook()
         let ws = wb.addWorksheet(ws_name)
         ws.columns <- [|
             Column.create("HeaderUp", "id")

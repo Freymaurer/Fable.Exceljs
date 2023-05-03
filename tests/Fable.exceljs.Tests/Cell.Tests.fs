@@ -40,7 +40,7 @@ let private excelValueType_array = [|
 
 let main = testList "Cell" [
     testCase "worksheet.getCell" <| fun _ ->
-        let wb = ExcelJs.exceljs.Workbook()
+        let wb = ExcelJs.Excel.Workbook()
         let ws = wb.addWorksheet(ws_name)
         let cell_a1 = ws.getCell "A1"
         Expect.equal cell_a1.address "A1" "address"
@@ -57,7 +57,7 @@ let main = testList "Cell" [
         cell_a1.value <- Some "newOption"
         Expect.equal cell_a1.value (Some "newOption") "value empty" 
     testCase "cell.type" <| fun _ ->
-        let wb = ExcelJs.exceljs.Workbook()
+        let wb = ExcelJs.Excel.Workbook()
         let ws = wb.addWorksheet(ws_name)
         let row = ws.getRow(1)
         row.values <- !!excelValueType_array
@@ -92,7 +92,7 @@ let main = testList "Cell" [
         Expect.equal j1.value (Some errorObj) "j1 value"
         Expect.equal j1.``type`` 10 "j1 type"
     testCase "cell.name" <| fun _ ->
-        let wb = ExcelJs.exceljs.Workbook()
+        let wb = ExcelJs.Excel.Workbook()
         let ws = wb.addWorksheet(ws_name)
         // A1 - D1
         let a1 = ws.getCell "A1"

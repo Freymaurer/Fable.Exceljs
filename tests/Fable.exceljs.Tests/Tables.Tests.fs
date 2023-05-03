@@ -24,7 +24,7 @@ let main = testList "Tables" [
         let table_t = Table("MyTable","A1",cols,rows)
         Expect.pass ()
     testCase "ws.addTable" <| fun _ ->
-        let wb = ExcelJs.exceljs.Workbook()
+        let wb = ExcelJs.Excel.Workbook()
         let ws = wb.addWorksheet(ws_name)
         let cols = [|
             TableColumn("Column 1 Test")
