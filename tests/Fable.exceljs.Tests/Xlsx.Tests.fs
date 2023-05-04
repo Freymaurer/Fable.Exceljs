@@ -7,25 +7,29 @@ open Fable.Core.JS
 open Fable.Core.JsInterop
 open Fable.ExcelJs
 
-[<Literal>]
-let MinimalPath = @"C:\Users\Kevin\source\repos\Fable.exceljs\tests\files\MinimalTest.xlsx"
+module TestWorkbooks =
+    
+    [<Literal>]
+    let private ws_name = "MySheet1"
 
-let main = testList "Xlsx" [
-    testAsync "async test" {
-        do! Async.Sleep 300
-        Expect.isTrue true ""
-    }
-    testCaseAsync "two" <| async {
-        do! Async.Sleep 1000
-        Expect.isTrue true ""
-    }
-    testAsync "Read Xlsx" {
-        let workbook = ExcelJs.Excel.Workbook()
-        Expect.passWithMsg "Create workbook"
-        do! workbook.xlsx.readFile(MinimalPath)
-        Expect.passWithMsg "Read File"
-        let worksheet = workbook.getWorksheet("sheet1");
-        Expect.passWithMsg "Get Worksheet"
-    }
-]
+    let Workbook1 =
+        let wb = ExcelJs.Excel.Workbook()
+        let ws = wb.addWorksheet(ws_name)
+        let cols = [|
+            TableColumn("Column 1 Test")
+            TableColumn("Column 2 Test")
+            TableColumn("Column 3 Test")
+        |]
+        let rows =
+            [|
+                for i in 0 .. 3 do
+                    yield
+                        box [|Some <| box $"Row {i}"; Some <| box i; Some (i%2 |> fun x -> x = 1 |> box)|]
+            |]
+        let table_t = Table("MyTable","A1",cols,rows)
+        let table = ws.addTable(table_t)
+        wb
+
+/// https://github.com/Zaid-Ajaj/Fable.Mocha/issues/69
+let main = testList "Xlsx" [ ]
 
