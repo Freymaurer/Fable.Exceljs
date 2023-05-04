@@ -1,3 +1,11 @@
+# Fable.exceljs
+
+Fable bindings for [exceljs](https://github.com/exceljs/exceljs).
+
+> Read, manipulate and write spreadsheet data and styles to XLSX and JSON.
+
+This is far from complete, but can be expanded as needed.
+
 # develop
 
 ### prerequisites

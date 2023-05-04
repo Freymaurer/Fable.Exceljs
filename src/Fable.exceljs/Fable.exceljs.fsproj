@@ -23,4 +23,10 @@
 	  <PackageReference Include="Fable.Core" Version="4.0.0" />
 	</ItemGroup>
 
+	<PropertyGroup>
+		<NpmDependencies>
+			<NpmPackage Name="exceljs" Version="4.3.0" ResolutionStrategy="Max" />
+		</NpmDependencies>
+	</PropertyGroup>
+	
 </Project>
