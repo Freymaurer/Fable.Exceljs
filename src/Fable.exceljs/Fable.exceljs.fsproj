@@ -13,6 +13,7 @@
     <Compile Include="Table.fs" />
     <Compile Include="Worksheet.fs" />
     <Compile Include="Xlsx.fs" />
+    <Compile Include="Csv.fs" />
     <Compile Include="Workbook.fs" />
     <Compile Include="ExcelJs.fs" />
     <Compile Include="Extensions.fs" />
