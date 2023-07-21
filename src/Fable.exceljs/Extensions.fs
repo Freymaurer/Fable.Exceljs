@@ -4,7 +4,6 @@ module Fable.ExcelJs.Extensions
 open Fable.Core
 open Fable.Core.JsInterop
 
-
 type Row with
     /// create js object with `column.key` as key and row value as value.
     /// Can be used e.g for insertRow, addRow.

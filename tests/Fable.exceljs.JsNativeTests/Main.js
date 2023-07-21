@@ -17,13 +17,13 @@ describe('Mocha native', function () {
             equal(worksheet.name, sheetname);
         });
     });
-    describe('IO Write', function () {
+    describe('IO roundtest', function () {
         it('write to path js native workbook', async () => { 
             const path = "./tests/Fable.exceljs.JsNativeTests/WriteTest.xlsx";
             const sheetname = "NextWorksheet";
             const wb = new Excel.Workbook();
             const ws = wb.addWorksheet(sheetname);
-            let date = new Date();
+            let date = new Date("2011-10-10T14:48:00");
             ws.addRow([3, 'Sam', date]);
             const rowValues = [];
             rowValues[1] = 4;
@@ -36,7 +36,11 @@ describe('Mocha native', function () {
             const readback_ws = readback_wb.getWorksheet(sheetname);
             equal(readback_ws.name, sheetname);
             equal(readback_ws.getRow(1).values[1], 3);
+            equal(readback_ws.getRow(1).values[2], 'Sam');
+            equal(readback_ws.getRow(1).values[3].getTime(), date.getTime());
+            equal(readback_ws.getRow(2).values[1], 4);
             equal(readback_ws.getRow(2).values[5], 'Kyle');
+            equal(readback_ws.getRow(2).values[9].getTime(), date.getTime());
         });
         it('write to path fable workbook', async () => { 
             const path = "./tests/Fable.exceljs.JsNativeTests/WriteTestFable.xlsx";
