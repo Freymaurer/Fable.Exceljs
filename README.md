@@ -6,32 +6,36 @@ Fable bindings for [exceljs](https://github.com/exceljs/exceljs).
 
 This is far from complete, but can be expanded as needed.
 
+# install
+
+[WIP]
+
 # develop
 
-### prerequisites
+## prerequisites
 
 - .NET 6 SDK
 - nodejs (tested with ~v16)
 - npm (tested with v9)
 
-### setup
+## setup
 
 - dotnet tool restore
 - npm install
 
-### build
+## build
 
-#### Windows
+### Windows
 
 run `build.cmd`
 
-#### or run the build project directly:
+### or run the build project directly:
 
 `dotnet run --project ./build/build.fsproj`
 
-### test
+## test
 
-#### Windows
+### Windows
 
 - run `build.cmd runTests`
 - run `npm test`
