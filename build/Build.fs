@@ -17,6 +17,8 @@ open PackageTasks
 open DocumentationTasks
 open ReleaseTasks
 
+let _ = ReleaseNotesTasks.updateReleaseNotes
+
 /// Full release of nuget package, git tag, and documentation for the stable version.
 let _release = 
     BuildTask.createEmpty 
