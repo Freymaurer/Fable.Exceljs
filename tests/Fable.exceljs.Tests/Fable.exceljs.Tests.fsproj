@@ -26,6 +26,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Fable.exceljs\Fable.exceljs.fsproj" />
+    <ProjectReference Include="..\..\src\Fable.exceljs\Fable.Exceljs.fsproj" />
   </ItemGroup>
 </Project>
