@@ -2,7 +2,7 @@
 
 open Fake.Core
 
-let project = "Fable.exceljs"
+let project = "Fable.Exceljs"
 
 let testProjects = 
     [

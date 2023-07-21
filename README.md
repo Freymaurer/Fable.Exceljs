@@ -34,7 +34,6 @@ run `build.cmd`
 #### Windows
 
 - run `build.cmd runTests`
+- run `npm test`
 
-#### or run the build project directly:
-
-`dotnet run --project ./build/build.fsproj runTests`
+As this repository only contains bindings for exceljs, the test will not run in dotnet but only in node.js environment.
