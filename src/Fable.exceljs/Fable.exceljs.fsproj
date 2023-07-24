@@ -40,7 +40,7 @@
 
 	<PropertyGroup>
 		<NpmDependencies>
-			<NpmPackage Name="exceljs" Version="4.3.0" ResolutionStrategy="Max" />
+			<NpmPackage Name="exceljs" Version="gt 4.3.0 lt 5.0.0" ResolutionStrategy="Max" />
 		</NpmDependencies>
 	</PropertyGroup>
 	

@@ -1,3 +1,9 @@
+### 1.0.2+863547c (Released 2023-7-24)
+* Additions:
+    * [[#863547c](https://github.com/Freymaurer/Fable.Exceljs/commit/863547c7ff4e90f52027d0c7d85646b5fa6f3289)] update msbuild properties
+* Bugfixes:
+    * [[#3348adc](https://github.com/Freymaurer/Fable.Exceljs/commit/3348adcea37d8fede66ae8e66e70b168cc437258)] Try fix linux build
+
 ### 1.0.0+34ed73d (Released 2023-7-21)
 * Additions:
     * [[#8271b80](https://github.com/Freymaurer/Fable.Exceljs/commit/8271b8046ace11a821fdfb6cc9d88fcae47c8972)] Initial commit
@@ -24,6 +30,7 @@
     * [[#ebd5d6a](https://github.com/Freymaurer/Fable.Exceljs/commit/ebd5d6a512642e7ac0019a84d93e32e5f37520c4)] finish io bindings (untested)
     * [[#bb358d6](https://github.com/Freymaurer/Fable.Exceljs/commit/bb358d63395a34f9c015774fe60d291083901da8)] Check tests and update dependencies
     * [[#34ed73d](https://github.com/Freymaurer/Fable.Exceljs/commit/34ed73da5cbda3928c48aa46976228d7db4ea7a5)] Update README.md :books:
+
 ### 0.0.0 (Released 2023-5-2)
 * Additions:
     * Initial set up for RELEASE_Notes.md
