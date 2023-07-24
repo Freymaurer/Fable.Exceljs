@@ -8,7 +8,28 @@ This is far from complete, but can be expanded as needed.
 
 # install
 
-[WIP]
+## Femto
+
+Using [Femto](https://github.com/Zaid-Ajaj/Femto), this will install both dotnet and npm dependency
+
+```bash
+femto install Fable.Exceljs
+```
+
+## Nuget and NPM
+
+[Nuget](https://www.nuget.org/packages/Fable.Exceljs):
+
+```bash
+dotnet add package Fable.Exceljs --version 1.0.3
+```
+
+You must also install the correct [npm](https://www.npmjs.com/package/exceljs) dependency,
+the current recommended version for `exceljs` is 4.3.0!
+
+```bash
+npm i exceljs
+```
 
 # develop
 
