@@ -1,3 +1,8 @@
+### 1.0.3+c436408 (Released 2023-7-24)
+* Bugfixes:
+    * [[#c436408](https://github.com/Freymaurer/Fable.Exceljs/commit/c436408705a366950ec0917dfcd27d11952585a5)] Fix femto issue :sparkles:
+    * [[#46cbfa0](https://github.com/Freymaurer/Fable.Exceljs/commit/46cbfa0d11a14779039b905fcc6417737473d8c7)] try fix femto issues
+
 ### 1.0.2+863547c (Released 2023-7-24)
 * Additions:
     * [[#863547c](https://github.com/Freymaurer/Fable.Exceljs/commit/863547c7ff4e90f52027d0c7d85646b5fa6f3289)] update msbuild properties
