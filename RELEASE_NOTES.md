@@ -1,3 +1,9 @@
+### 1.1.0+9768db5 (Released 2023-7-24)
+* Additions:
+    * [[#75344a2](https://github.com/Freymaurer/Fable.Exceljs/commit/75344a28961a201d34654c43da9ace2cd99fbc41)] Update installation information
+* Bugfixes:
+    * [[#9768db5](https://github.com/Freymaurer/Fable.Exceljs/commit/9768db5f7b9b3c87f3ed8d7d3e1aa5d63c7c2306)] make pkg fable compatible :bug:
+
 ### 1.0.3+c436408 (Released 2023-7-24)
 * Bugfixes:
     * [[#c436408](https://github.com/Freymaurer/Fable.Exceljs/commit/c436408705a366950ec0917dfcd27d11952585a5)] Fix femto issue :sparkles:
