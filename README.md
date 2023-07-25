@@ -46,9 +46,7 @@ npm i exceljs
 
 ## build
 
-### Windows
-
-run `build.cmd`
+run `./build.cmd`
 
 ### or run the build project directly:
 
@@ -56,9 +54,13 @@ run `build.cmd`
 
 ## test
 
-### Windows
-
-- run `build.cmd runTests`
+- run `./build.cmd runTests`
 - run `npm test`
 
 As this repository only contains bindings for exceljs, the test will not run in dotnet but only in node.js environment.
+
+## publish
+
+1. increase version from latest release `./build.cmd releasenotes semver:xxx` [`semver:major`; `semver:minor`; `semver:patch`]
+2. `./build.cmd pack`
+3. upload package in `pkg`. 
