@@ -1,3 +1,7 @@
+### 1.3.4+0dd0ab2 (Released 2023-7-25)
+* Additions:
+    * [[#0dd0ab2](https://github.com/Freymaurer/Fable.Exceljs/commit/0dd0ab28c264cb48b87fbe78b83ecf2b6d7e69ce)] Make tableRef more fsharpi :art:
+
 ### 1.3.3+5a323ce (Released 2023-7-25)
 * Additions:
     * [[#5a323ce](https://github.com/Freymaurer/Fable.Exceljs/commit/5a323ce7bf168061703cf0237ea87087e1c47a99)] add tableRef property :sparkles:
