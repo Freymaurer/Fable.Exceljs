@@ -19,7 +19,7 @@ let main = testList "Tables" [
             [|
                 for i in 0 .. 3 do
                     yield
-                        box [|Some <| box $"Row {i}"; Some <| box i; Some (i%2 |> fun x -> x = 1 |> box)|]
+                        [|box $"Row {i}"; box i; (i%2 |> fun x -> x = 1 |> box)|]
             |]
         let table_t = Table("MyTable","A1",cols,rows)
         Expect.pass ()
@@ -35,7 +35,7 @@ let main = testList "Tables" [
             [|
                 for i in 0 .. 3 do
                     yield
-                        box [|Some <| box $"Row {i}"; Some <| box i; Some (i%2 |> fun x -> x = 1 |> box)|]
+                        [|box $"Row {i}"; box i; (i%2 |> fun x -> x = 1 |> box)|]
             |]
         let table_t = Table("MyTable","A1",cols,rows)
         let table = ws.addTable(table_t)

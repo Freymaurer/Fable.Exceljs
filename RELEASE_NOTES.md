@@ -1,3 +1,7 @@
+### 1.2.0+c03bf88 (Released 2023-7-24)
+* Additions:
+    * [[#c03bf88](https://github.com/Freymaurer/Fable.Exceljs/commit/c03bf888b36d4942fcdaa0446b5a3f7cb2ab109a)] Support netstandard2.0
+
 ### 1.1.0+9768db5 (Released 2023-7-24)
 * Additions:
     * [[#75344a2](https://github.com/Freymaurer/Fable.Exceljs/commit/75344a28961a201d34654c43da9ace2cd99fbc41)] Update installation information

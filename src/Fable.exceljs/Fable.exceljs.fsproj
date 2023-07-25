@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0;netstandard2.0</TargetFramework>
+    <TargetFrameworks>netstandard2.0;net6.0</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
 
@@ -31,7 +31,9 @@
     <Compile Include="Extensions.fs" />
   </ItemGroup>
 
-	<ItemGroup />
+	<ItemGroup>
+	  <EmbeddedResource Remove="obj\**" />
+	</ItemGroup>
 	
 	<ItemGroup>
       <PackageReference Update="FSharp.Core" Version="[6.0.7]" />
@@ -40,6 +42,14 @@
 
 	<ItemGroup>
 		<Content Include="*.fsproj; **\*.fs; **\*.fsi" PackagePath="fable\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Remove="obj\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Remove="Fable.Exceljs.fsproj" />
 	</ItemGroup>
 
 	<PropertyGroup>

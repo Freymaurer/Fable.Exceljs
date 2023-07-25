@@ -73,10 +73,10 @@ type ITable =
     /// Column definitions
     abstract member columns: TableColumn [] with get, set
     /// Rows of data
-    abstract member rows: RowValues [] with get, set
+    abstract member rows: RowValues [] [] with get, set
     //abstract member tableRef: CellRange with get // how to do this?
 
-type Table(name: string, ref: CellAdress, columns: TableColumn [], rows: RowValues [], ?displayName: string, ?headerRow: bool, ?totalsRow: bool, ?style: obj) =
+type Table(name: string, ref: CellAdress, columns: TableColumn [], rows: RowValues [] [], ?displayName: string, ?headerRow: bool, ?totalsRow: bool, ?style: obj) =
     interface ITable with
         member val name = name with get, set
         member val displayName = Option.defaultValue "name" displayName with get, set
