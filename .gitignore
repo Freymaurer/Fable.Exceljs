@@ -397,3 +397,5 @@ FodyWeavers.xsd
 # JetBrains Rider
 *.sln.iml
 /tests/Fable.exceljs.JsNativeTests/fable/**/*.js
+/tests/Fable.exceljs.JsNativeTests/WriteTest.xlsx
+/tests/Fable.exceljs.JsNativeTests/WriteTestFable.xlsx
