@@ -1,3 +1,7 @@
+### 1.2.1+0a178af (Released 2023-7-25)
+* Additions:
+    * [[#0a178af](https://github.com/Freymaurer/Fable.Exceljs/commit/0a178af82d6ecc40d8808f8e38798d47a2e1b97c)] Improve Table rows syntax
+
 ### 1.2.0+c03bf88 (Released 2023-7-24)
 * Additions:
     * [[#c03bf88](https://github.com/Freymaurer/Fable.Exceljs/commit/c03bf888b36d4942fcdaa0446b5a3f7cb2ab109a)] Support netstandard2.0
