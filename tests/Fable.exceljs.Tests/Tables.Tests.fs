@@ -40,5 +40,63 @@ let main = testList "Tables" [
         let table_t = Table("MyTable","A1",cols,rows)
         let table = ws.addTable(table_t)
         Expect.equal table.name "MyTable" table.name
+    testCase "ws.addTable" <| fun _ ->
+        let wb = ExcelJs.Excel.Workbook()
+        let ws = wb.addWorksheet(ws_name)
+        let cols = [|
+            TableColumn("Column 1 Test")
+            TableColumn("Column 2 Test")
+            TableColumn("Column 3 Test")
+        |]
+        let rows =
+            [|
+                for i in 0 .. 3 do
+                    yield
+                        [|box $"Row {i}"; box i; (i%2 |> fun x -> x = 1 |> box)|]
+            |]
+        let table_t = Table("MyTable","A1",cols,rows)
+        let table = ws.addTable(table_t)
+        let getTable = ws.getTable("MyTable")
+        Expect.equal getTable table "getTable"
+    testCase "getTables" <| fun _ ->
+        let wb = ExcelJs.Excel.Workbook()
+        let ws = wb.addWorksheet(ws_name)
+        let cols = [|
+            TableColumn("Column 1 Test")
+            TableColumn("Column 2 Test")
+            TableColumn("Column 3 Test")
+        |]
+        let rows =
+            [|
+                for i in 0 .. 3 do
+                    yield
+                        [|box $"Row {i}"; box i; (i%2 |> fun x -> x = 1 |> box)|]
+            |]
+        let table_t = Table("MyTable","A1",cols,rows)
+        let table = ws.addTable(table_t)
+        let getTables = ws.getTables()
+        Expect.equal getTables.Length 1 "count"
+        Expect.equal getTables.[0] table "equal"
+    testCase "removeTables" <| fun _ ->
+        let wb = ExcelJs.Excel.Workbook()
+        let ws = wb.addWorksheet(ws_name)
+        let cols = [|
+            TableColumn("Column 1 Test")
+            TableColumn("Column 2 Test")
+            TableColumn("Column 3 Test")
+        |]
+        let rows =
+            [|
+                for i in 0 .. 3 do
+                    yield
+                        [|box $"Row {i}"; box i; (i%2 |> fun x -> x = 1 |> box)|]
+            |]
+        let table_t = Table("MyTable","A1",cols,rows)
+        let table = ws.addTable(table_t)
+        let getTables = ws.getTables()
+        Expect.equal getTables.Length 1 "count"
+        ws.removeTable("MyTable")
+        let getTables2 = ws.getTables()
+        Expect.equal getTables2.Length 0 "count"
     ]
 

@@ -43,6 +43,7 @@ type Worksheet =
     abstract member columns: Column [] with get, set
     [<Emit("$0._rows")>]
     abstract member rows: Row [] with get
+    abstract member tables: ITable [] with get, set
     /// A count of the number of columns that have values.
     abstract member actualColumnCount: int with get
     /// The total column size of the document. Equal to the maximum cell count from all of the rows
@@ -53,6 +54,12 @@ type Worksheet =
     abstract member rowCount: int with get
     /// add a table to a sheet
     abstract member addTable: ITable -> ITable
+    /// get a table from worksheet by name
+    abstract member getTable: string -> ITable
+    /// get all tables from worksheet
+    abstract member getTables: unit -> ITable []
+    /// remove table from worksheet by name
+    abstract member removeTable: string -> unit
     /// Access an individual columns by key, letter and 1-based column number
     abstract member getColumn: string -> Column
     /// Access an individual columns by key, letter and 1-based column number
