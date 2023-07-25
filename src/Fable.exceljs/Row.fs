@@ -9,6 +9,8 @@ open Cell
 
 [<AllowNullLiteral>]
 type Row =
+    [<Emit("$0.cells")>]
+    abstract member cells: Cell [] with get
     abstract member height: float with get, set
     abstract member hidden: bool with get, set
     abstract member outlineLevel: int with get, set
