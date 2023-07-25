@@ -1,3 +1,7 @@
+### 1.3.0+89fb1f2 (Released 2023-7-25)
+* Bugfixes:
+    * [[#89fb1f2](https://github.com/Freymaurer/Fable.Exceljs/commit/89fb1f2e10b14724959e5ff55fdd33c476b540be)] Fix exceljs OpenXml incompatibility + tests :sparkles:
+
 ### 1.2.2+83533ad (Released 2023-7-25)
 * Additions:
     * [[#83533ad](https://github.com/Freymaurer/Fable.Exceljs/commit/83533ad5aafd48a5652d8beb2bdf816feb1b52ed)] Improve table api

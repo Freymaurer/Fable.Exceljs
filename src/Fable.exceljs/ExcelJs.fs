@@ -7,7 +7,6 @@ type ExcelJS =
     [<Emit("new $0.Workbook()")>]
     abstract member Workbook: unit -> Workbook
     
-
 /// exceljs is unable to parse xml nodes with global namespaces. OpenXml writes global namespaces to nearly all xml nodes with "x:".
 /// The responsible function `BaseXform.prototype.parse` is overwritten here to remove this "x:" namespace. 
 /// Allowing us to read in OpenXml generated xlsx files
