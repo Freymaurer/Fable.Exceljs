@@ -29,6 +29,20 @@ let main = testList "Tables" [
             |]
         let table_t = Table("MyTable","A1",cols,rows)
         Expect.pass ()
+    testCase "no ITableRef" <| fun _ ->
+        let cols = [|
+            TableColumn("Column 1 Test")
+            TableColumn("Column 2 Test")
+            TableColumn("Column 3 Test")
+        |]
+        let rows =
+            [|
+                for i in 0 .. 3 do
+                    yield
+                        [|box $"Row {i}"; box i; (i%2 |> fun x -> x = 1 |> box)|]
+            |]
+        let table_t = Table("MyTable","A1",cols,rows) :> ITable
+        Expect.isNone table_t.table "isNone"
     testCase "tableRef" <| fun _ ->
         let wb = ExcelJs.Excel.Workbook()
         let ws = wb.addWorksheet(ws_name)
@@ -46,7 +60,8 @@ let main = testList "Tables" [
         let table_t = Table("MyTable","A1",cols,rows)
         let table = ws.addTable(table_t)
         Expect.equal table.ref "A1" "ref"
-        Expect.equal (table.tableRef) "A1:C5" "tableRef"
+        Expect.isSome table.table "isSome"
+        Expect.equal table.table.Value.tableRef "A1:C5" "tableRef"
     testCase "tableRef, not equal" <| fun _ ->
         let wb = ExcelJs.Excel.Workbook()
         let ws = wb.addWorksheet(ws_name)
@@ -64,7 +79,8 @@ let main = testList "Tables" [
         let table_t = Table("MyTable","A1",cols,rows)
         let table = ws.addTable(table_t)
         Expect.equal table.ref "A1" "ref"
-        Expect.notEqual (table.tableRef) "A1:C6" "tableRef"
+        Expect.isSome table.table "isSome"
+        Expect.notEqual table.table.Value.tableRef "A1:C6" "tableRef"
     testCase "ws.addTable" <| fun _ ->
         let wb = ExcelJs.Excel.Workbook()
         let ws = wb.addWorksheet(ws_name)

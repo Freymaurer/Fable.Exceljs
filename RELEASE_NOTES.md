@@ -1,3 +1,7 @@
+### 1.3.3+5a323ce (Released 2023-7-25)
+* Additions:
+    * [[#5a323ce](https://github.com/Freymaurer/Fable.Exceljs/commit/5a323ce7bf168061703cf0237ea87087e1c47a99)] add tableRef property :sparkles:
+
 ### 1.3.2+3a3bfcb (Released 2023-7-25)
 * Additions:
     * [[#3a3bfcb](https://github.com/Freymaurer/Fable.Exceljs/commit/3a3bfcbf4c1a10ff2c088c482acfff07b9f0461d)] Update row api :sparkles:
