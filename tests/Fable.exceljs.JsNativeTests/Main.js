@@ -52,4 +52,22 @@ describe('Mocha native', function () {
             equal(readback_ws.name, sheetname);
         });
     });
+    describe('IO read OpenXml', function () {
+        it('read', async () => {
+            const path = "./tests/Fable.exceljs.JsNativeTests/OpenXmlTest.xlsx";
+            const sheetname = "Hello";
+            const workbook = new Excel.Workbook();
+            await workbook.xlsx.readFile(path);
+            const worksheet = workbook.getWorksheet(sheetname);
+            equal(worksheet.name, sheetname);
+        });
+        it('should return undefined', async () => {
+            const path = "./tests/Fable.exceljs.JsNativeTests/OpenXmlTest.xlsx";
+            const sheetname = "Hello2";
+            const workbook = new Excel.Workbook();
+            await workbook.xlsx.readFile(path);
+            const worksheet = workbook.getWorksheet(sheetname);
+            equal(worksheet, undefined)
+        });
+    });
 });
