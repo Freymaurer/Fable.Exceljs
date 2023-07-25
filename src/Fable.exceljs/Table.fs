@@ -74,7 +74,8 @@ type ITable =
     abstract member columns: TableColumn [] with get, set
     /// Rows of data
     abstract member rows: RowValues [] [] with get, set
-    //abstract member tableRef: CellRange with get // how to do this?
+    [<Emit("$0.table.tableRef")>]
+    abstract member tableRef: CellRange // how to do this?
 
 type Table(name: string, ref: CellAdress, columns: TableColumn [], rows: RowValues [] [], ?displayName: string, ?headerRow: bool, ?totalsRow: bool, ?style: obj) =
     interface ITable with
@@ -86,3 +87,5 @@ type Table(name: string, ref: CellAdress, columns: TableColumn [], rows: RowValu
         member val style = Option.defaultValue (box None) style with get, set
         member val columns = columns with get, set
         member val rows = rows with get, set
+        [<Emit("$0.table.tableRef")>]
+        member val tableRef = !!null with get

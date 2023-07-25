@@ -1,3 +1,7 @@
+### 1.3.2+3a3bfcb (Released 2023-7-25)
+* Additions:
+    * [[#3a3bfcb](https://github.com/Freymaurer/Fable.Exceljs/commit/3a3bfcbf4c1a10ff2c088c482acfff07b9f0461d)] Update row api :sparkles:
+
 ### 1.3.1+1e07b42 (Released 2023-7-25)
 * Bugfixes:
     * [[#1e07b42](https://github.com/Freymaurer/Fable.Exceljs/commit/1e07b4207c8ed094fb9531889c2a28be8cd0b71a)] Fix fable compatibility
