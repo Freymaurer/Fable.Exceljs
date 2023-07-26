@@ -1,5 +1,5 @@
 import { equal } from 'assert';
-import { Excel } from "./fable/src/Fable.exceljs/ExcelJs.js";
+import { Excel } from "./fable/src/ExcelJs.js";
 import { TestWorkbooks_Workbook1 } from "./fable/Xlsx.Tests.js";
 
 describe('Mocha native', function () {

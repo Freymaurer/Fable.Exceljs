@@ -25,11 +25,8 @@ jobs:
           node-version: 16
     - name: install node modules
       run: npm install
-    - name: make script executable
-      run: chmod u+x build.sh
-    - name: Build and test dotnet
-      working-directory: ./
-      run: ./build.sh runtests
+    - name: run
+      run: npm test
 
   build-and-test-windows:
     
@@ -49,6 +46,5 @@ jobs:
           node-version: 16
     - name: install node modules
       run: npm install
-    - name: Build and test dotnet
-      working-directory: ./
-      run: ./build.cmd runtests
+    - name: run
+      run: npm test

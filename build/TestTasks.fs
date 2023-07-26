@@ -125,21 +125,8 @@ module RunTests =
         run npm "test" ""
     }
 
-    let runTestsDotnet = BuildTask.create "runTestsDotnet" [clean; build] {
-        testProjects
-        |> Seq.iter (fun testProject ->
-            Fake.DotNet.DotNet.test(fun testParams ->
-                {
-                    testParams with
-                        Logger = Some "console;verbosity=detailed"
-                        Configuration = DotNet.BuildConfiguration.fromString configuration
-                        NoBuild = true
-                }
-            ) testProject
-        )
-    }
 
-let runTests = BuildTask.create "RunTests" [clean; build; RunTests.runTestsJs; RunTests.runTestsDotnet] { 
+let runTests = BuildTask.create "RunTests" [clean; build; RunTests.runTestsJs ] { 
     ()
 }
 
@@ -151,24 +138,13 @@ module WatchTests =
             $"[{n}]"
         pName, dotnet "watch run" projPath
 
-    let private dotnetTestsProcesses =
-        [
-            for testProj in testProjects do
-                yield watchProjTests testProj
-        ]
-
     let private fableTestsProcesses =
         [
             "[Fable Core]", dotnet $"fable watch {FableTestPath_input} -o {FableTestPath_output} --run npm run test:live" "."
             "[Mocha JsNative]", npm $"run testnative:live" "."
         ]
 
-    let allTest = dotnetTestsProcesses@fableTestsProcesses
-
-    let watchTestsDotnet = BuildTask.create "watchTestsDotnet" [clean; build] {
-        dotnetTestsProcesses
-        |> runParallel
-    }
+    let allTest = fableTestsProcesses
 
     let watchJS = BuildTask.create "watchTestsJS" [clean; build] {
         fableTestsProcesses
@@ -178,28 +154,4 @@ module WatchTests =
 let watchTests = BuildTask.create "watchTests" [clean; build] {
     WatchTests.allTest
     |> runParallel
-}
-
-// to do: use this once we have actual tests ~ Kevin Schneider
-// Not sure how this interacts with the changes for fable compatibility, i will..
-// ..leave it in for now ~ Kevin Frey
-let runTestsWithCodeCov = BuildTask.create "RunTestsWithCodeCov" [clean; build] {
-    let standardParams = Fake.DotNet.MSBuild.CliArguments.Create ()
-    testProjects
-    |> Seq.iter(fun testProject -> 
-        Fake.DotNet.DotNet.test(fun testParams ->
-            {
-                testParams with
-                    MSBuildParams = {
-                        standardParams with
-                            Properties = [
-                                "AltCover","true"
-                                "AltCoverCobertura","../../codeCov.xml"
-                                "AltCoverForce","true"
-                            ]
-                    };
-                    Logger = Some "console;verbosity=detailed"
-            }
-        ) testProject
-    )
 }
