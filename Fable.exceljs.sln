@@ -7,8 +7,6 @@ Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Build", "build\Build.fsproj
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{71A9B89F-A805-43E6-AD2D-6F6A2BAF8692}"
 EndProject
-Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Fable.Exceljs", "src\Fable.exceljs\Fable.Exceljs.fsproj", "{92E13909-B77E-4B76-A30B-A8A4E388D6E3}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{9DA6C4F3-8EC5-4080-9B97-D7DC8A6E8585}"
 EndProject
 Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Fable.Exceljs.Tests", "tests\Fable.exceljs.Tests\Fable.Exceljs.Tests.fsproj", "{FE0456E4-74FB-4188-8BE9-8768E14C6E50}"
@@ -32,6 +30,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "gh-actions", "gh-actions", 
 		.github\workflows\build-and-test.yml = .github\workflows\build-and-test.yml
 	EndProjectSection
 EndProject
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Fable.Exceljs", "src\Fable.Exceljs.fsproj", "{5C5AF22E-441F-4493-B840-9390057A925C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,22 +42,22 @@ Global
 		{DD978C6C-CF16-4F56-9AB2-CED1B168B341}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD978C6C-CF16-4F56-9AB2-CED1B168B341}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD978C6C-CF16-4F56-9AB2-CED1B168B341}.Release|Any CPU.Build.0 = Release|Any CPU
-		{92E13909-B77E-4B76-A30B-A8A4E388D6E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{92E13909-B77E-4B76-A30B-A8A4E388D6E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{92E13909-B77E-4B76-A30B-A8A4E388D6E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{92E13909-B77E-4B76-A30B-A8A4E388D6E3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FE0456E4-74FB-4188-8BE9-8768E14C6E50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FE0456E4-74FB-4188-8BE9-8768E14C6E50}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE0456E4-74FB-4188-8BE9-8768E14C6E50}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FE0456E4-74FB-4188-8BE9-8768E14C6E50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C5AF22E-441F-4493-B840-9390057A925C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C5AF22E-441F-4493-B840-9390057A925C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C5AF22E-441F-4493-B840-9390057A925C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C5AF22E-441F-4493-B840-9390057A925C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{92E13909-B77E-4B76-A30B-A8A4E388D6E3} = {71A9B89F-A805-43E6-AD2D-6F6A2BAF8692}
 		{FE0456E4-74FB-4188-8BE9-8768E14C6E50} = {9DA6C4F3-8EC5-4080-9B97-D7DC8A6E8585}
 		{C654AFD3-6F48-4744-92FB-0A4DBD02F046} = {9DA6C4F3-8EC5-4080-9B97-D7DC8A6E8585}
+		{5C5AF22E-441F-4493-B840-9390057A925C} = {71A9B89F-A805-43E6-AD2D-6F6A2BAF8692}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B6B39965-2059-43CA-96FE-E44903BAAC0D}

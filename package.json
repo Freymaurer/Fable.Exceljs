@@ -4,11 +4,11 @@
   "description": "Fable bindings for exceljs",
   "type": "module",
   "scripts": {
-    "pretest": "dotnet fable tests/Fable.exceljs.Tests -o tests/Fable.exceljs.JsNativeTests/fable",
-    "test": "mocha tests/Fable.exceljs.JsNativeTests/fable",
-    "posttest": "mocha tests/Fable.exceljs.JsNativeTests",
-    "test:live": "mocha --watch --parallel tests/Fable.exceljs.JsNativeTests/fable",
-    "testnative:live": "mocha --watch --parallel tests/exceljs.JsNativeTests"
+    "pretest": "dotnet fable tests/Fable.Exceljs.Tests -o tests/Fable.Exceljs.JsNativeTests/fable",
+    "test": "mocha tests/Fable.Exceljs.JsNativeTests/fable",
+    "posttest": "mocha tests/Fable.Exceljs.JsNativeTests",
+    "test:live": "mocha --watch --parallel tests/Fable.Exceljs.JsNativeTests/fable",
+    "testnative:live": "mocha --watch --parallel tests/Exceljs.JsNativeTests"
   },
   "keywords": [
     "fable",
