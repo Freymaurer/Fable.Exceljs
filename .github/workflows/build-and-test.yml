@@ -26,6 +26,7 @@ jobs:
     - name: install node modules
       run: npm install
     - name: run
+      working-directory: ./
       run: npm test
 
   build-and-test-windows:
@@ -47,4 +48,5 @@ jobs:
     - name: install node modules
       run: npm install
     - name: run
+      working-directory: ./
       run: npm test
