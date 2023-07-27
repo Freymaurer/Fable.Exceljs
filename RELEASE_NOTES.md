@@ -1,3 +1,7 @@
+### 1.3.6+3ad68c4 (Released 2023-7-27)
+* Bugfixes:
+    * [[#3ad68c4](https://github.com/Freymaurer/Fable.Exceljs/commit/3ad68c48c3660fbfb1e542f7c76bf48cdd311502)] Lost type definitions by accident :bug:
+
 ### 1.3.5+a2b127f (Released 2023-7-27)
 * Additions:
     * [[#958f857](https://github.com/Freymaurer/Fable.Exceljs/commit/958f857e7cab7f24a1ae8014d519041079fc0151)] Update README.md :books:
