@@ -26,8 +26,17 @@ type WorksheetState =
 /// make worksheet hidden
 | [<CompiledName("veryHidden")>] VeryHidden
 
+type ITableRef =
+    abstract member worksheet: Worksheet with get
+    abstract member table: Table option with get
+    abstract member ref: CellAdress with get, set
+    abstract member name: string with get, set
+    abstract member headerRow: bool with get, set
+    abstract member displayName: string with get, set
+    abstract member showFirstColumn: bool with get, set
+    abstract member showLastColumn: bool with get, set
 
-type Worksheet =
+and Worksheet =
     abstract member id: int with get, set
     abstract member name: string with get, set
     abstract member state: WorksheetState with get, set
@@ -43,7 +52,8 @@ type Worksheet =
     abstract member columns: Column [] with get, set
     [<Emit("$0._rows")>]
     abstract member rows: Row [] with get
-    abstract member tables: ITable [] with get, set
+    /// Not sure how this should be used
+    abstract member tables: obj with get, set
     /// A count of the number of columns that have values.
     abstract member actualColumnCount: int with get
     /// The total column size of the document. Equal to the maximum cell count from all of the rows
@@ -53,11 +63,11 @@ type Worksheet =
     /// The total row size of the document. Equal to the row number of the last row that has values.
     abstract member rowCount: int with get
     /// add a table to a sheet
-    abstract member addTable: ITable -> ITable
+    abstract member addTable: Table -> ITableRef
     /// get a table from worksheet by name
-    abstract member getTable: string -> ITable
+    abstract member getTable: string -> ITableRef
     /// get all tables from worksheet
-    abstract member getTables: unit -> ITable []
+    abstract member getTables: unit -> ITableRef []
     /// remove table from worksheet by name
     abstract member removeTable: string -> unit
     /// Access an individual columns by key, letter and 1-based column number
