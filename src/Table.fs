@@ -46,11 +46,11 @@ type TableColumn
         ?totalsRowFunction: string, 
         ?totalsRowFormula: obj
     ) =
-    member val name = jsNative with get, set
-    member val filterButton = jsNative with get, set
-    member val totalsRowLabel = jsNative with get, set
-    member val totalsRowFunction = jsNative with get, set
-    member val totalsRowFormula = jsNative with get, set
+    member val name: string = jsNative with get, set
+    member val filterButton: bool = jsNative with get, set
+    member val totalsRowLabel: TotalsFunctions = jsNative with get, set
+    member val totalsRowFunction: string = jsNative with get, set
+    member val totalsRowFormula: obj = jsNative with get, set
 
 [<AllowNullLiteral>]
 [<Global>]
@@ -65,13 +65,21 @@ type Table
         ?totalsRow: bool, 
         ?style: obj
     ) =
-    //interface ITable with
-    member val name = jsNative with get, set
-    member val displayName = jsNative with get, set
-    member val ref = jsNative with get, set
-    member val headerRow = jsNative with get, set
-    member val totalsRow = jsNative with get, set
-    member val style = jsNative with get, set
-    member val columns = jsNative with get, set
-    member val rows = jsNative with get, set
-    member val tableRef = jsNative with get
+    /// The name of the table
+    member val name: string = jsNative with get, set
+    /// The display name of the table.
+    member val displayName: string = jsNative with get, set
+    /// Top left cell of the table
+    member val ref: CellAdress = jsNative with get, set
+    /// Show headers at top of table
+    member val headerRow: bool = jsNative with get, set
+    /// Show totals at bottom of table
+    member val totalsRow: bool = jsNative with get, set
+     /// More style properties
+    member val style: obj = jsNative with get, set
+    /// columns
+    member val columns: TableColumn [] = jsNative with get, set
+    /// rows
+    member val rows: RowValues [] [] = jsNative with get, set
+    /// full range of table. Exmp "A1:D4"
+    member val tableRef: CellRange = jsNative with get

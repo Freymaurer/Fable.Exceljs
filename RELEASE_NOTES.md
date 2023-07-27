@@ -1,3 +1,12 @@
+### 1.3.5+a2b127f (Released 2023-7-27)
+* Additions:
+    * [[#958f857](https://github.com/Freymaurer/Fable.Exceljs/commit/958f857e7cab7f24a1ae8014d519041079fc0151)] Update README.md :books:
+    * [[#c69a32c](https://github.com/Freymaurer/Fable.Exceljs/commit/c69a32c99ca61779fe41dfd2466eb3fd9c85f56a)] Refactor repo :hammer:
+    * [[#a2b127f](https://github.com/Freymaurer/Fable.Exceljs/commit/a2b127f3b29c636b9c8594b7f81ae040515ac7a8)] greatly improve table syntax
+* Bugfixes:
+    * [[#a79a4c5](https://github.com/Freymaurer/Fable.Exceljs/commit/a79a4c5d5bb23a3292ac34b211c07dda45b1bccc)] try fix linux test issues
+    * [[#3a64055](https://github.com/Freymaurer/Fable.Exceljs/commit/3a6405537827cbe9b4075f0aaf7bd83943a3fefc)] Try fix tests
+
 ### 1.3.4+0dd0ab2 (Released 2023-7-25)
 * Additions:
     * [[#0dd0ab2](https://github.com/Freymaurer/Fable.Exceljs/commit/0dd0ab28c264cb48b87fbe78b83ecf2b6d7e69ce)] Make tableRef more fsharpi :art:
