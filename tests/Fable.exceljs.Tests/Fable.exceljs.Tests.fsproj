@@ -23,6 +23,6 @@
 	  <PackageReference Include="YoloDev.Expecto.TestSdk" Version="[0.13.2]" />
 	  <PackageReference Include="Microsoft.NET.Test.Sdk" Version="[17.4.0]" />
 	  <ProjectReference Include="..\..\src\Fable.Exceljs.fsproj" />
-    <PackageReference Update="FSharp.Core" Version="[6.0.7]" />
+    <PackageReference Update="FSharp.Core" Version="6.0.7" />
   </ItemGroup>
 </Project>
