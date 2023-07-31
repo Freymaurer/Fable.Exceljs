@@ -1,3 +1,9 @@
+### 1.3.7+93039dd (Released 2023-7-31)
+* Additions:
+    * [[#93039dd](https://github.com/Freymaurer/Fable.Exceljs/commit/93039ddbdb1b86c0b8edc084d759bd968c19a26f)] soften dependency restraints
+* Bugfixes:
+    * [[#bf963e6](https://github.com/Freymaurer/Fable.Exceljs/commit/bf963e63485d6bef619fead8954fccdb9a6ce0b1)] try fix linux build
+
 ### 1.3.6+3ad68c4 (Released 2023-7-27)
 * Bugfixes:
     * [[#3ad68c4](https://github.com/Freymaurer/Fable.Exceljs/commit/3ad68c48c3660fbfb1e542f7c76bf48cdd311502)] Lost type definitions by accident :bug:
