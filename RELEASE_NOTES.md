@@ -1,3 +1,7 @@
+### 1.4.0+1a5c8a6 (Released 2023-8-1)
+* Bugfixes:
+    * [[#1a5c8a6](https://github.com/Freymaurer/Fable.Exceljs/commit/1a5c8a67e6faf593339627246274a06ef343ed65)] Fix OpenXml<->exceljs table read issue :tada:
+
 ### 1.3.7+93039dd (Released 2023-7-31)
 * Additions:
     * [[#93039dd](https://github.com/Freymaurer/Fable.Exceljs/commit/93039ddbdb1b86c0b8edc084d759bd968c19a26f)] soften dependency restraints
