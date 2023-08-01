@@ -1,3 +1,7 @@
+### 1.5.0+881e7fb (Released 2023-8-1)
+* Additions:
+    * [[#881e7fb](https://github.com/Freymaurer/Fable.Exceljs/commit/881e7fb81b641776087944a03aef56f6dac8cf03)] Make xlsx functions correctly Promise instead of Async :tada:
+
 ### 1.4.0+1a5c8a6 (Released 2023-8-1)
 * Bugfixes:
     * [[#1a5c8a6](https://github.com/Freymaurer/Fable.Exceljs/commit/1a5c8a67e6faf593339627246274a06ef343ed65)] Fix OpenXml<->exceljs table read issue :tada:
