@@ -69,5 +69,31 @@ describe('Mocha native', function () {
             const worksheet = workbook.getWorksheet(sheetname);
             equal(worksheet, undefined)
         });
+        it('ExcelTable', async () => {
+            const path = "./tests/Fable.exceljs.JsNativeTests/ExcelTable.xlsx";
+            const sheetname = "New Worksheet";
+            const workbook = new Excel.Workbook();
+            await workbook.xlsx.readFile(path);
+            const worksheet = workbook.getWorksheet(sheetname);
+            equal(worksheet.name, sheetname);
+        });
+        it('OpenXmlTable', async () => {
+            const path = "./tests/Fable.exceljs.JsNativeTests/OpenXmlTable.xlsx";
+            const sheetname = "New Worksheet";
+            const workbook = new Excel.Workbook();
+            await workbook.xlsx.readFile(path);
+            const worksheet = workbook.getWorksheet(sheetname);
+            equal(worksheet.name, sheetname);
+        });
+        it('isa.study', async () => {
+            const path = "./tests/Fable.exceljs.JsNativeTests/isa.study.xlsx";
+            const sheetname = "Study";
+            const workbook = new Excel.Workbook();
+            await workbook.xlsx.readFile(path);
+            const worksheet = workbook.getWorksheet(sheetname);
+            equal(worksheet.name, sheetname);
+            const worksheets = workbook.worksheets;
+            equal(worksheets.length, 5);
+        });
     });
 });
