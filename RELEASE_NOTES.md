@@ -1,3 +1,7 @@
+### 1.6.0+b2fa42f (Released 2023-8-2)
+* Additions:
+    * [[#b2fa42f](https://github.com/Freymaurer/Fable.Exceljs/commit/b2fa42f18cfcffe585ea72e2a08c9c063feb50f2)] Update to use nfdi4plants fork of exceljs :sparkles:
+
 ### 1.5.0+881e7fb (Released 2023-8-1)
 * Additions:
     * [[#881e7fb](https://github.com/Freymaurer/Fable.Exceljs/commit/881e7fb81b641776087944a03aef56f6dac8cf03)] Make xlsx functions correctly Promise instead of Async :tada:
