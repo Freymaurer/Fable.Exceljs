@@ -46,7 +46,7 @@
 
 	<PropertyGroup>
 		<NpmDependencies>
-			<NpmPackage Name="exceljs" Version="gte 4.3.0 lt 5.0.0" ResolutionStrategy="Max" />
+			<NpmPackage Name="@nfdi4plants/exceljs" Version="gte 0.1.0 lt 1.0.0" ResolutionStrategy="Max" />
 		</NpmDependencies>
 	</PropertyGroup>
 	

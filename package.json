@@ -1,6 +1,5 @@
 {
   "name": "fable.exceljs",
-  "version": "1.0.0",
   "description": "Fable bindings for exceljs",
   "type": "module",
   "scripts": {
@@ -20,6 +19,6 @@
     "mocha": "^10.2.0"
   },
   "dependencies": {
-    "exceljs": "^4.3.0"
+    "@nfdi4plants/exceljs": "^0.1.0"
   }
 }
