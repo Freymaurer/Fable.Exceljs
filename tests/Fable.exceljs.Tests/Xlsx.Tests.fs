@@ -28,7 +28,7 @@ module TestWorkbooks =
         let table = ws.addTable(table_t)
         wb
 
-let [<Literal>] File1Path = @"C:\Users\Kevin\source\repos\Fable.Exceljs\tests\Fable.Exceljs.JsNativeTests/ReadWriteFableTest.xlsx"
+let [<Literal>] File1Path = @"./tests/Fable.Exceljs.JsNativeTests/ReadWriteFableTest.xlsx"
 
 let tests_write = testList "write" [
     testAsync "ensure async" {
