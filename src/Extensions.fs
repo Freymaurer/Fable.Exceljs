@@ -1,6 +1,8 @@
 ﻿[<AutoOpen>]
 module Fable.ExcelJs.Extensions
 
+#if FABLE_COMPILER_JAVASCRIPT || FABLE_COMPILER_TYPESCRIPT || !FABLE_COMPILER
+
 open Fable.Core
 open Fable.Core.JsInterop
 
@@ -34,3 +36,5 @@ type WorksheetProperties with
             if defaultColWidth.IsSome then "defaultColWidth", box defaultColWidth.Value
             if dyDescent.IsSome then "dyDescent", box dyDescent.Value
         ]
+
+#endif

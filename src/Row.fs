@@ -1,6 +1,8 @@
 ﻿[<AutoOpen>]
 module Fable.ExcelJs.Row
 
+#if FABLE_COMPILER_JAVASCRIPT || FABLE_COMPILER_TYPESCRIPT || !FABLE_COMPILER
+
 open Fable.Core
 open Fable.Core.JsInterop
 open Fable.ExcelJs
@@ -32,3 +34,5 @@ type Row =
     abstract member eachCell: includeEmpty:bool*func:(Cell*int -> unit) -> unit
     /// Commit a completed row to stream
     abstract member commit: unit -> unit
+
+#endif

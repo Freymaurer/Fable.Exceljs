@@ -1,6 +1,8 @@
 ﻿[<AutoOpen>]
 module Fable.ExcelJs.Worksheet
 
+#if FABLE_COMPILER_JAVASCRIPT || FABLE_COMPILER_TYPESCRIPT || !FABLE_COMPILER   
+
 open Fable.Core
 open Fable.Core.JsInterop
 open Fable.ExcelJs
@@ -118,3 +120,4 @@ and Worksheet =
     abstract member eachRow: includeEmpty:bool*func:(Row*int -> unit) -> unit
     abstract member getCell: CellAdress -> Cell
 
+#endif
