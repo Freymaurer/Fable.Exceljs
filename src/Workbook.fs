@@ -1,6 +1,8 @@
 ﻿[<AutoOpen>]
 module Fable.ExcelJs.Workbook
 
+#if FABLE_COMPILER_JAVASCRIPT || FABLE_COMPILER_TYPESCRIPT || !FABLE_COMPILER
+
 open Fable.Core
 open Fable.Core.JsInterop
 open Fable.ExcelJs
@@ -35,3 +37,5 @@ type Workbook =
     abstract member worksheets: Worksheet [] with get
     [<Emit("$0.eachSheet(function(worksheet, sheetId){$1([worksheet, sheetId])})")>] //oh boy
     abstract member eachSheet: func:(Worksheet*int -> unit) -> unit
+
+#endif

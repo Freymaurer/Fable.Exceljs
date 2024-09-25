@@ -1,5 +1,7 @@
 ﻿module Fable.ExcelJs.ExcelJs
 
+#if FABLE_COMPILER_JAVASCRIPT || FABLE_COMPILER_TYPESCRIPT || !FABLE_COMPILER
+
 open Fable.Core
 open Fable.Core.JsInterop
 
@@ -59,3 +61,5 @@ type ExcelJS =
 //    patchTableRelationshipTarget(RelationshipXform)
 
 let Excel: ExcelJS = importDefault "@nfdi4plants/exceljs"
+
+#endif

@@ -1,6 +1,8 @@
 ﻿[<AutoOpen>]
 module Fable.ExcelJs.Cell
 
+#if FABLE_COMPILER_JAVASCRIPT || FABLE_COMPILER_TYPESCRIPT || !FABLE_COMPILER
+
 open Fable.Core
 open Fable.Core.JsInterop
 open Fable.ExcelJs
@@ -30,3 +32,5 @@ type Cell =
     abstract member row: int with get
     //abstract member workbook: Workbook.Workbook with get
     //abstract member Worksheet: Worksheet with get
+
+#endif

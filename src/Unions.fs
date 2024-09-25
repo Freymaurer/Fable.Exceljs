@@ -4,6 +4,8 @@ module Fable.ExcelJs.Unions
 open Fable.Core
 open Fable.Core.JsInterop
 
+#if FABLE_COMPILER_JAVASCRIPT || FABLE_COMPILER_TYPESCRIPT || !FABLE_COMPILER
+
 type ErrorValue =
 | NotApplicable
 | Ref
@@ -85,3 +87,4 @@ type CellRange = string
 /// Example4: [Some "Test"; Some 2; Some 4; None; None; None; Some "Test me too"]
 type RowValues = obj
 
+#endif

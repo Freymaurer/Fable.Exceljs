@@ -1,6 +1,8 @@
 ﻿[<AutoOpen>]
 module Fable.ExcelJs.Table
 
+#if FABLE_COMPILER_JAVASCRIPT || FABLE_COMPILER_TYPESCRIPT || !FABLE_COMPILER
+
 open Fable.Core
 open Fable.Core.JsInterop
 open Fable.ExcelJs
@@ -83,3 +85,5 @@ type Table
     member val rows: RowValues [] [] = jsNative with get, set
     /// full range of table. Exmp "A1:D4"
     member val tableRef: CellRange = jsNative with get
+
+#endif

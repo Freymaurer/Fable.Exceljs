@@ -1,3 +1,9 @@
+### 2.0.0+565fc3e (Released 2024-9-23)
+* Additions:
+    * [[#8a820b3](https://github.com/Freymaurer/Fable.Exceljs/commit/8a820b3e2941c2b3591084d4ae6c31c3ed7678ab)] Update RELEASE_NOTES
+* Bugfixes:
+    * [[#565fc3e](https://github.com/Freymaurer/Fable.Exceljs/commit/565fc3ec881df87f288b18406ee019967869caac)] Fix absolute path
+
 ### 1.6.0+b2fa42f (Released 2023-8-2)
 * Additions:
     * [[#b2fa42f](https://github.com/Freymaurer/Fable.Exceljs/commit/b2fa42f18cfcffe585ea72e2a08c9c063feb50f2)] Update to use nfdi4plants fork of exceljs :sparkles:

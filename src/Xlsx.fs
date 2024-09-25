@@ -1,6 +1,8 @@
 ﻿[<AutoOpen>]
 module Fable.ExcelJs.Xlsx
 
+#if FABLE_COMPILER_JAVASCRIPT || FABLE_COMPILER_TYPESCRIPT || !FABLE_COMPILER   
+
 open Fable.Core.JS
 
 type Xlsx =
@@ -16,3 +18,5 @@ type Xlsx =
     abstract member write: filename:System.IO.Stream -> Promise<unit>
     /// write to a new buffer
     abstract member writeBuffer: unit -> Promise<obj>
+
+#endif

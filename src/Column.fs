@@ -1,6 +1,8 @@
 ﻿[<AutoOpen>]
 module Fable.ExcelJs.Column
 
+#if FABLE_COMPILER_JAVASCRIPT || FABLE_COMPILER_TYPESCRIPT || !FABLE_COMPILER
+
 open Fable.Core
 open Fable.Core.JsInterop
 open Fable.ExcelJs
@@ -22,3 +24,5 @@ type Column =
     abstract member eachCell: func:(Cell*int -> unit) -> unit
     [<Emit("$0.eachCell({ includeEmpty: $1 }, function(cell, columnIndex){$2([cell, columnIndex])})")>]
     abstract member eachCell: includeEmpty:bool*func:(Cell*int -> unit) -> unit
+
+#endif
